@@ -4,14 +4,14 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Matthew White.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_powers()
-    run_test_sum_powers_in_range()
+    #run_test_sum_powers_in_range()
 
 
 def run_test_sum_powers():
@@ -29,7 +29,23 @@ def run_test_sum_powers():
     print('Testing the   sum_powers   function:')
     print('--------------------------------------------------')
 
+    # Test 1:
+    expected = 12
+    answer = sum_powers(12,0)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
 
+    # Test 2:
+    expected = 144.45655
+    answer = sum_powers(100,0.1)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 3.80826
+    answer = sum_powers(5,-0.3)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
 def sum_powers(n, p):
     """
     What comes in:  A non-negative integer n
@@ -49,6 +65,11 @@ def sum_powers(n, p):
     #   No fair running the code of  sum_powers  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # -------------------------------------------------------------------------
+    total = 0
+    for k in range(n):
+        total = total + (k + 1) ** p
+
+    return total
 
 
 def run_test_sum_powers_in_range():
