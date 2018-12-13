@@ -19,27 +19,46 @@
 ###############################################################################
 
 
+# def main():
+#     hello("Snow White")
+#     goodbye("Bashful")
+#     hello("Grumpy")
+#     hello("Sleepy")
+#     hello_and_goodbye("Magic Mirror", "Cruel Queen")
+#
+#
+# def hello(friend):
+#     print("Hello,", friend, "- how are things?")
+#
+#
+# def goodbye(friend):
+#     print("Goodbye,", friend, '- see you later!')
+#     print('   Ciao!')
+#     print('   Bai bai!')
+#
+#
+# def hello_and_goodbye(person1, person2):
+#     hello(person1)
+#     goodbye(person2)
+#
+#
+# main()
+
 def main():
-    hello("Snow White")
-    goodbye("Bashful")
-    hello("Grumpy")
-    hello("Sleepy")
-    hello_and_goodbye("Magic Mirror", "Cruel Queen")
+    one()
+    two()
+    three()
 
+def one():
+    print('One!')
+    return 1 + two()
 
-def hello(friend):
-    print("Hello,", friend, "- how are things?")
+def two():
+    print('Two!')
+    return 1
+    print('Done')
 
-
-def goodbye(friend):
-    print("Goodbye,", friend, '- see you later!')
-    print('   Ciao!')
-    print('   Bai bai!')
-
-
-def hello_and_goodbye(person1, person2):
-    hello(person1)
-    goodbye(person2)
-
+def three():
+    print('Three!',two(),one())
 
 main()
